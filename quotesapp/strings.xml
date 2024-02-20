@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">quotes</string>
+
+    <string name="click_here">Click the button to display a quote!</string>
+    <string name="change_quote">Change Quote</string>
+</resources>
