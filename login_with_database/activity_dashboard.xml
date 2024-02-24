@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- LinearLayout to hold the main content vertically -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Nested LinearLayout to hold profile image and username -->
+
+        <!-- Text for choosing recipe to cook -->
+        <LinearLayout
+            android:layout_width="369dp"
+            android:layout_height="108dp"
+            android:orientation="horizontal">
+
+            <!-- Profile Image View -->
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="61dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="8dp"
+                android:src="@drawable/user" />
+
+            <!-- Text View for "Dear" and username -->
+            <TextView
+                android:id="@+id/textViewWelcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="5dp"
+                android:text="Hello "
+                android:textStyle="italic"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="-50dp"
+                android:layout_marginTop="32dp"
+                android:text="Username"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!-- Button for uploading recipe -->
+            <Button
+                android:id="@+id/uploadRecipeButton"
+                android:layout_width="100dp"
+                android:layout_height="58dp"
+                android:layout_marginStart="60dp"
+                android:background="@android:color/black"
+                android:text="Upload Recipe"
+                android:textColor="@android:color/white" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewChooseRecipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="Choose Recipe to Cook"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Horizontal ScrollView for buttons -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:id="@+id/buttonsContainer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Add your buttons here, dynamically if needed -->
+                <Button
+                    android:id="@+id/Comfort_Food"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Comfort Food"
+                    android:background="@color/black"/>
+
+                <Button
+                    android:id="@+id/Healthy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Healthy"
+                    android:background="@color/black"/>
+
+                <Button
+                    android:id="@+id/Baking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Baking"
+                    android:background="@color/black"/>
+
+                <Button
+                    android:id="@+id/Our_Recipes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="Our Recipes"
+                    android:background="@color/black"/>
+
+                <Button
+                    android:id="@+id/On_Tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:text="On TV"
+                    android:background="@color/black"/>
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- RecyclerView for displaying recipe cards -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recipeRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp" />
+
+    </LinearLayout>
+</RelativeLayout>
